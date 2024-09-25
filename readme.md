@@ -1,4 +1,5 @@
 # bredbandskollen-cli
+[![NPM](https://nodei.co/npm/bredbandskollen-cli.png?compact=true)](https://npmjs.org/package/bredbandskollen-cli)
 
 Measure your internet speed from the command line using Bredbandskollen.
 
