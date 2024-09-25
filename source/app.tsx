@@ -5,13 +5,13 @@ import {ProgressBar} from '@inkjs/ui';
 import dns from 'dns';
 
 type Json = {
-	downloadSpeed: string | null;
-	uploadSpeed: string | null;
-	latency: string | null;
-	connectionType: string | null;
-	operator: string | null;
-	serverName: string | null;
-	date: string | null;
+	downloadSpeed?: string | null;
+	uploadSpeed?: string | null;
+	latency?: string | null;
+	connectionType?: string | null;
+	operator?: string | null;
+	serverName?: string | null;
+	date?: string | null;
 };
 
 type Props = {
@@ -70,17 +70,20 @@ const App = ({json: showJson}: Props) => {
 					setIsComplete(true);
 					clearInterval(intervalId);
 					if (showJson) {
+						const date = await page.$eval('#testDate', el => el.textContent);
 						const json: Json = {
-							downloadSpeed,
-							uploadSpeed,
-							latency: await page.$eval('#latency', el => el.textContent),
+							downloadSpeed: downloadSpeed?.replace(',', '.'),
+							uploadSpeed: uploadSpeed?.replace(',', '.'),
+							latency: (
+								await page.$eval('#latency', el => el.textContent)
+							)?.replace(',', '.'),
 							connectionType: await page.$eval(
 								'#connectionType',
 								el => el.textContent,
 							),
 							operator: await page.$eval('#operator', el => el.textContent),
 							serverName: await page.$eval('#serverName', el => el.textContent),
-							date: await page.$eval('#testDate', el => el.textContent),
+							date: date ? new Date(date).toISOString() : null,
 						};
 						setJson(json);
 					}
