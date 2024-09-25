@@ -10,17 +10,16 @@ Measure your internet speed from the command line using Bredbandskollen.
 $ npm install -g bredbandskollen-cli
 ```
 
-## CLI
+## Usage
 
 ```
-Usage
-	  $ bredbandskollen
+$ bredbandskollen
 
-	Options
-		--json  JSON output
+Options
+	--json  JSON output
 
-	Examples
-	  $ bredbandskollen --json
+Examples
+	$ bredbandskollen --json
 ```
 
 ![](assets/video.gif)
