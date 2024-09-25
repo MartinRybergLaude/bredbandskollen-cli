@@ -7,7 +7,7 @@
 		"email": "contact@mrlaude.com",
 		"url": "https://mrlaude.com"
 	},
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "EUPL-1.2",
 	"bin": {
 		"bredbandskollen": "dist/cli.js"
