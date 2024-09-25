@@ -1,5 +1,12 @@
 {
 	"name": "bredbandskollen-cli",
+	"description": "Measure your internet speed from the command line using Bredbandskollen",
+	"repository": "MartinRybergLaude/bredbandskollen-cli",
+	"author": {
+		"name": "Martin Ryberg Laude",
+		"email": "contact@mrlaude.com",
+		"url": "https://mrlaude.com"
+	},
 	"version": "1.0.0",
 	"license": "EUPL-1.2",
 	"bin": {
@@ -7,13 +14,36 @@
 	},
 	"type": "module",
 	"engines": {
-		"node": ">=16"
+		"node": ">=18"
 	},
 	"scripts": {
 		"build": "tsc",
+		"prepublish": "npm run build",
+		"postinstall": "npx playwright install chromium",
 		"dev": "tsc --watch",
 		"test": "prettier --check . && xo && ava"
 	},
+	"keywords": [
+		"cli-app",
+		"cli",
+		"speed",
+		"test",
+		"fast",
+		"tester",
+		"down",
+		"download",
+		"upload",
+		"up",
+		"speed-test",
+		"speedtest",
+		"bredbandskollen",
+		"connection",
+		"internet",
+		"bandwidth",
+		"measure",
+		"check",
+		"mbps"
+	],
 	"files": [
 		"dist"
 	],
