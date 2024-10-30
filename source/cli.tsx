@@ -1,4 +1,5 @@
-#!/usr/bin/env node --no-warnings
+#!/usr/bin/env -S node --no-warnings=ExperimentalWarning
+
 import React from 'react';
 import {render} from 'ink';
 import meow from 'meow';
