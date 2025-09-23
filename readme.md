@@ -3,7 +3,7 @@
 
 Measure your internet speed from the command line using Bredbandskollen.
 
-![](assets/screenshot.png)
+![](assets/screenshot2.png)
 
 ## Install
 
@@ -23,7 +23,9 @@ Examples
 	$ bredbandskollen --json
 ```
 
-![](assets/video.gif)
+https://github.com/user-attachments/assets/6cd21065-9961-4129-a3df-d928d009f693
+
+
 
 ## License
 
