@@ -45,6 +45,7 @@ const App = ({json: showJson}: Props) => {
 			await page.goto('https://www.bredbandskollen.se/');
 			await page.click('#onetrust-reject-all-handler');
 			await page.click('#measure');
+			await page.click('text="Nej, dela inte"');
 
 			setIsPreparing(false);
 			const intervalId = setInterval(async () => {
