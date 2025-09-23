@@ -7,7 +7,7 @@
 		"email": "contact@mrlaude.com",
 		"url": "https://mrlaude.com"
 	},
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"license": "EUPL-1.2",
 	"bin": {
 		"bredbandskollen": "dist/cli.js"
@@ -19,7 +19,7 @@
 	"scripts": {
 		"build": "tsc",
 		"prepublish": "npm run build",
-		"postinstall": "npx playwright install chromium",
+		"postinstall": "npx playwright install --with-deps chromium",
 		"dev": "tsc --watch",
 		"test": "prettier --check . && xo && ava"
 	},
